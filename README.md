@@ -1,6 +1,7 @@
 # Project Overview
-This is a AWS cluster provisioning and application deployment project using Terraform.
 This project demonstrates automated AWS infrastructure provisioning and application deployment using Terraform.
+
+The infrastructure is provisioned using reusable Terraform modules, while application deployment is automated through EC2 user data scripts that install Docker and deploy an NGINX container automatically during instance initialization.
 
 # 1. Architecture
 Internet
