@@ -11,3 +11,12 @@ module "security_group" {
 
   vpc_id = module.network.vpc_id
 }
+
+module "ec2" {
+  source = "./modules/ec2"
+
+  instance_type     = var.instance_type
+  subnet_id         = module.network.subnet_id
+  security_group_id = module.security_group.security_group_id
+  key_name          = "terraform-aws-key"
+}
